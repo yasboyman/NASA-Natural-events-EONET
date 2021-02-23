@@ -3,6 +3,7 @@ import React,{useState} from "react";
 import GoogleMapReact from 'google-map-react';
 import LocationMarker from "../LocationMarker";
 import WildfireInfoBox from "../WildfireInfoBox";
+import VolcanoMarker from "../VolcanoMarker";
 
 
 const  Map = ({eventData, center, zoom}) => {
@@ -34,13 +35,20 @@ const  Map = ({eventData, center, zoom}) => {
                 bootstrapURLKeys={{
                          key: 'AIzaSyAy3wmwCyAzTJ9kdZlAVZ9ilxM5AJfiDD8' }}
                 defaultCenter={{
-                            lat: 42.3265,
-                            lng: -122.8756
+                            lat: -50.3265,
+                            lng: -12.8756
                 }}
-                defaultZoom={ 6 }
+                defaultZoom={ 3 }
             >
 
                 {wildFires}
+
+                <VolcanoMarker
+                        lat={ -50.3265}
+                        lng={-12.8756}
+
+
+                />
 
             </GoogleMapReact>
 
@@ -51,13 +59,13 @@ const  Map = ({eventData, center, zoom}) => {
     );
 }
 
-// Map.defaulProps = {
-//     center: {
-//         lat: 42.3265,
-//         lng: -122.8756
-//     },
-//
-//     zoom: 6
-// }
+Map.defaulProps = {
+    center: {
+        lat: 42.3265,
+        lng: -122.8756
+    },
+
+    zoom: 6
+}
 
 export default Map;

@@ -44,7 +44,7 @@ body {
 .location-info{
     position: absolute;
     width: 400px;
-    top: 0px;
+    top: 10px;
     transition: none 0s ease 0s;
     cursor: move;
     list-style-type: none;
