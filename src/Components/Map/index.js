@@ -15,7 +15,7 @@ const  Map = ({eventData, center, zoom}) => {
     const wildFires = eventData.map( ev => {
 
          if(ev.categories[0].id === 8) {
-             console.log('wildires: ', ev)
+
              return <LocationMarker
                  lat={ev.geometries[0].coordinates[1]}
                  lng={ev.geometries[0].coordinates[0]}
@@ -23,6 +23,22 @@ const  Map = ({eventData, center, zoom}) => {
              />
          }
          return null;
+
+    });
+
+
+    const volcanosData = eventData.map( ev => {
+
+        if(ev.categories[0].id === 12) {
+            console.log('volcanos: ', ev)
+            console.log( 'length', ev.geometries[0].coordinates.length)
+
+            return <VolcanoMarker
+                lat={ ev.geometries[0].coordinates.length === 2 ? ev.geometries[0].coordinates[1] : ev.geometries[0].coordinates[0][0][1]  }
+                lng={ ev.geometries[0].coordinates.length === 2 ? ev.geometries[0].coordinates[0] : ev.geometries[0].coordinates[0][0][0]    }
+            />
+        }
+        return null;
 
     })
 
@@ -42,13 +58,8 @@ const  Map = ({eventData, center, zoom}) => {
             >
 
                 {wildFires}
+                {volcanosData}
 
-                <VolcanoMarker
-                        lat={ -50.3265}
-                        lng={-12.8756}
-
-
-                />
 
             </GoogleMapReact>
 
