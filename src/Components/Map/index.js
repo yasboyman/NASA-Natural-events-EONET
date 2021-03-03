@@ -2,8 +2,8 @@
 import React,{useState} from "react";
 import GoogleMapReact from 'google-map-react';
 import LocationMarker from "../LocationMarker";
-import WildfireInfoBox from "../WildfireInfoBox";
-import VolcanoMarker from "../VolcanoMarker";
+import WildfireInfoBox from "../WildfireInfoBox/index";
+import VolcanoMarker from "../VolcanoMarker/index";
 
 
 const  Map = ({eventData, center, zoom}) => {

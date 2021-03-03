@@ -6,13 +6,15 @@
     "@iconify-icons/mdi": "^1.1.11",
     "@iconify/icons-mdi": "^1.1.11",
     "@iconify/react": "^1.1.4",
-    "@testing-library/jest-dom": "^5.11.9",
+    "@jest/globals": "^26.6.2",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
     "axios": "^0.21.1",
+    "babel-preset-stage-0": "^6.24.1",
     "google-map-react": "^2.1.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
@@ -39,5 +41,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1",
+    "react-test-renderer": "^17.0.1"
   }
+
 }
