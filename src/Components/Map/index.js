@@ -4,6 +4,8 @@ import GoogleMapReact from 'google-map-react';
 import LocationMarker from "../LocationMarker";
 import WildfireInfoBox from "../WildfireInfoBox/index";
 import VolcanoMarker from "../VolcanoMarker/index";
+import KeyForIcons from "../KeyIcons/KeyForIcons";
+
 
 
 const  Map = ({eventData, center, zoom}) => {
@@ -42,10 +44,13 @@ const  Map = ({eventData, center, zoom}) => {
 
     })
 
-    console.log('locationINFO', locationInfo)
     return (
         <div className="map">
             { locationInfo && <WildfireInfoBox info={locationInfo} />}
+            { <KeyForIcons
+                header={'hello'}
+                desc={'Goodbye'}
+             />}
 
             <GoogleMapReact
                 bootstrapURLKeys={{
@@ -60,7 +65,6 @@ const  Map = ({eventData, center, zoom}) => {
                 {wildFires}
                 {volcanosData}
 
-
             </GoogleMapReact>
 
 
@@ -70,13 +74,6 @@ const  Map = ({eventData, center, zoom}) => {
     );
 }
 
-Map.defaulProps = {
-    center: {
-        lat: 42.3265,
-        lng: -122.8756
-    },
 
-    zoom: 6
-}
 
 export default Map;

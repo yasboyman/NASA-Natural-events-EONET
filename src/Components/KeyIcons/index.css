@@ -1,0 +1,77 @@
+
+
+.key-for-icons {
+    /*display: flex;*/
+    /*flex-direction: column-reverse;*/
+    /*align-items: center;*/
+    /*justify-content: space-evenly;*/
+    display: inline-grid;
+    grid-column: auto;
+    position: absolute;
+    width: 10%;
+    top: 20rem;
+    transition: none 0s ease 0s;
+    cursor: move;
+    list-style-type: none;
+    padding: 10px;
+    background-color:  rgba(255,255,255,0.5);
+    margin-right: 5%;
+    /*font-weight: 500;*/
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    border-radius: 5px;
+    left: 5%;
+    max-width: 375px;
+    transform: translateX(-20%);
+    z-index: 1;
+}
+
+
+.wildfire-icon-key{
+    font-size: 1.5rem;
+    color: red;
+}
+
+.volcano-icon-volcano-key {
+    font-size: 2rem;
+    color: orange;
+}
+
+
+.key-fire {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+}
+
+.key-volcano {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+h5 {
+  padding: -9%;
+    margin: 8px auto;
+}
+
+header {
+font-weight: bold;
+    background-color: firebrick;
+    color: white;
+    width: 100%;
+    text-align: center;
+    /*border-radius: 5px 20px;*/
+}
+
+h6 {
+    color: black;
+}
+

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Map from './Components/Map/index';
 import axios from 'axios';
 import Loader from './Components/Loader/index'
+import KeyForIcons from "./Components/KeyIcons/KeyForIcons";
 
 
 
@@ -43,6 +44,7 @@ const  App = () => {
         {/*    onClick={ () => setIncrement(counter - 1)}*/}
         {/*>Increment</button>*/}
         {/*<div id={'counter-value'}>{counter}</div>*/}
+
 
         {!loading ? <Map eventData={eventData} /> : <Loader />}
 

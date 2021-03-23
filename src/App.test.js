@@ -6,6 +6,47 @@ import {render} from '@testing-library/react'
 import {findByTestAttr} from './testingUtilties/index'
 
 
+
+describe( 'Rendering App component',  () => {
+
+    it('Should render the App Component without crashing', () => {
+        shallow(<App/>)
+
+    });
+
+    it('Should render the header in App component', () => {
+       const wrapper =  shallow(<App/>)
+        const header = ( <header className={'header'}>
+            <h1 className={'title'}
+                data-test={'title-component'} > Welcome to the Wildfire Tracker...</h1>
+        </header>)
+
+        expect(wrapper.contains(header)).toEqual(true)
+
+    });
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // describe('Counter Testin', () => {
 //
 //     let wrapper;
@@ -47,32 +88,41 @@ import {findByTestAttr} from './testingUtilties/index'
 
 // });
 
+// describe( 'It should render without errors',() => {
+//
+//       let component;
+//         beforeEach( () => {
+//             component = shallow( <App />)
+//          } )
+//
+//     it('should render without errors', () => {
+//
+//         const wrapper  = findByTestAttr( component, 'app-component' )
+//         expect(wrapper.length).toBe(1)
+//     });
+//
+//     it('should render a title', () => {
+//
+//         const wrapper = findByTestAttr( component, 'title-component' )
+//         expect(wrapper.text()).toContain('Welcome')
+//
+//     })
+//
+//
+//
+//
+//
+//    it('should render a tile', () => {
+//
+//       const  wrapper = findByTestAttr( component, 'title-component')
+//        expect(wrapper.text()).toBe(' Welcome to the Wildfire Tracker...')
+//    })
 
 
 
 
 
 
-describe( 'It should render without errors',() => {
-
-      let component;
-        beforeEach( () => {
-            component = shallow( <App />)
-         } )
-
-    it('should render without errors', () => {
-
-        const wrapper  = findByTestAttr( component, 'app-component' )
-        expect(wrapper.length).toBe(1)
-    });
-
-    it('should render a title', () => {
-
-        const wrapper = findByTestAttr( component, 'title-component' )
-        expect(wrapper.text()).toContain('Welcome')
-
-    })
-})
 
 
 
